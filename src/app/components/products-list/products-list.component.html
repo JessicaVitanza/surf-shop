@@ -1,15 +1,15 @@
 <div class="container" >
   <div>
-    <input [(ngModel)]="searchString" id="search-input" type="text"><button (click)="search()">OK</button>
+    <input [(ngModel)]="searchString" id="search-input" type="text"><button (click)="search()" class="ok">OK</button>
     <select [(ngModel)]="selectedCategory" name="" id="category-select" (change)="filterByCategory()">
       <option value="">tutti i prodotti</option>
       <option value="tavole">tavole</option>
       <option value="mute">mute</option>
       <option value="abbigliamento">abbigliamento</option>
     </select>
-    <button (click)="orderByPrice()">Ordina per prezzo</button>
-    <button (click)="orderByName()">Ordina alfabeticamente</button>
-    <button (click)="getAllProducts()">annulla</button>
+    <button class="order" (click)="orderByPrice()">Ordina per prezzo</button>
+    <button class="order" (click)="orderByName()">Ordina alfabeticamente</button>
+    <button class="order" (click)="getAllProducts()">annulla</button>
   </div>
   <app-product-card *ngFor="let product of products" [selectedProduct]="product"></app-product-card>
 </div>

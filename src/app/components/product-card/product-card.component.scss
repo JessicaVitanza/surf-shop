@@ -1,17 +1,25 @@
 .container{
   display: flex;
-  border: solid 1px;
+  box-shadow: 2px 2px 4px rgb(27, 74, 128);
+  border-radius: 12px;
   padding: 8px;
   margin: 8px;
   cursor: pointer;
+  background-color: rgba(245, 245, 245, 0.31);
+
 }
 
 .img{
   height: 50px;
   width: 50px;
+  border-radius: 12px;
+  margin-right: 10px;
 }
 
 .data{
   display: flex;
   flex-direction: column;
+  color: rgb(27, 74, 128);
+  letter-spacing: 1px;
+  line-height: 20px;
 }

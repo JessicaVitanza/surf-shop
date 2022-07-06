@@ -1,16 +1,23 @@
-<header>
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/product">prodotti</a>
-    <a *ngIf="!userS.user" routerLink="/login">login</a>
-    <a *ngIf="userS.user" (click)="logout()">logout</a>
-    <a *ngIf="userS.user" routerLink="/user" >user</a>
-    <a routerLink="/cart" appCartLink [user]="userS.user">cart</a>
-  </nav>
-  <!-- <h2 *ngIf="userS.user">Welcome Back {{userS.user.name}}</h2> -->
-</header>
-<router-outlet></router-outlet>
-<footer>
-  <p>tutti i diritti riservati a noi</p>
-</footer>
 
+<body>
+  <header>
+    <h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/product">prodotti</a>
+      <a *ngIf="!userS.user" routerLink="/login">login</a>
+      <a *ngIf="userS.user" (click)="logout()">logout</a>
+      <a *ngIf="userS.user" routerLink="/user" >user</a>
+      <a routerLink="/cart" appCartLink [user]="userS.user">cart</a>
+    </nav>
+    <!-- <h2 *ngIf="userS.user">Welcome Back {{userS.user.name}}</h2> -->
+  </header>
+  <router-outlet></router-outlet>
+  
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    
+</body>
